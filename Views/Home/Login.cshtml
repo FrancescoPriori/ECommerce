@@ -1,0 +1,14 @@
+
+@model Priori.francesco._5h.ECommerce.Models.Utenti
+@{
+    ViewData["Title"] = "Login";
+}
+<form asp-controller="Home" asp-action="Reg" method="post">
+Username:
+    <input type="text" asp-for="Username" name="Username"><br>
+    Password:
+    <input type="password" asp-for="Password" name="Password"><br>
+    <input type="submit" name="Login">
+    <input type="reset" name="Annulla">
+    <a asp-controller="Home" asp-action="Registrazione">Se non sei registrato clicca qui</a>
+</form>

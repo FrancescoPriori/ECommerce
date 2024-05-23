@@ -1,0 +1,29 @@
+@model Priori.francesco._5h.ECommerce.Models.Componenti
+    ViewData["Title"] = "Carrello";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Questo è il tuo Carrello!</h1>
+</div>
+@if (ViewData["Carrello"] != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Nome Componente</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Componente in (List<string>)ViewData["Carrello"])
+            {
+                <tr>
+                    <td>@Componente</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Il carrello è vuoto</p>
+}
